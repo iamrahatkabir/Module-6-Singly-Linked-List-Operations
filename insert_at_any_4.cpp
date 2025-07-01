@@ -46,6 +46,10 @@ void insert_at_any(Node* &head, int idx, int val)
     for(int i = 1; i < idx; i++)
     {
         temp = temp->next;
+        if(temp == NULL) // If Index is grater than liked list size;
+        {
+            return;
+        }
     }
     newnode->next = temp->next;
     temp->next = newnode;
